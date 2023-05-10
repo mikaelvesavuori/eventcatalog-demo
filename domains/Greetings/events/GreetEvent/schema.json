@@ -1,0 +1,135 @@
+{
+    "type": "object",
+    "description": "GreetEvent wrapped in EventBridge `detail`.",
+    "properties": {
+        "detail": {
+            "type": "object",
+            "description": "EventBridge `detail` field.",
+            "additionalProperties": false,
+            "properties": {
+                "data": {
+                    "type": "object",
+                    "description": "The user-provided data.",
+                    "additionalProperties": true
+                },
+                "metadata": {
+                    "type": "object",
+                    "description": "General metadata that is always provided.",
+                    "additionalProperties": true,
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "ID of the event."
+                        },
+                        "correlationId": {
+                            "type": "string",
+                            "description": "Correlation ID for the function call."
+                        },
+                        "timestamp": {
+                            "type": "string",
+                            "description": "Timestamp of this message in Unix epoch."
+                        },
+                        "timestampRequest": {
+                            "type": "string",
+                            "description": "Timestamp of the call."
+                        },
+                        "level": {
+                            "type": "string",
+                            "description": "Log level."
+                        },
+                        "context": {
+                            "type": "object",
+                            "description": "Context object.",
+                            "additionalProperties": true
+                        },
+                        "version": {
+                            "type": "number",
+                            "description": "The version of the logged service."
+                        },
+                        "user": {
+                            "type": "string",
+                            "description": "The user in this context."
+                        },
+                        "route": {
+                            "type": "string",
+                            "description": "The route that is responding. In EventBridge, this will be your detail type."
+                        },
+                        "duration": {
+                            "type": "number",
+                            "description": "Duration of processing in milliseconds."
+                        },
+                        "error": {
+                            "type": "boolean",
+                            "description": "Is this an error?"
+                        },
+                        "httpStatusCode": {
+                            "type": "number",
+                            "description": "What HTTP status code does this represent?",
+                            "minimum": 100,
+                            "maximum": 599
+                        },
+                        "traceId": {
+                            "type": "string",
+                            "description": "Trace ID."
+                        },
+                        "lifecycleStage": {
+                            "type": "string",
+                            "description": "Which lifecycle stage the logged service pertains to."
+                        },
+                        "domain": {
+                            "type": "string",
+                            "description": "Domain of the producer system."
+                        },
+                        "system": {
+                            "type": "string",
+                            "description": "System of the producer."
+                        },
+                        "service": {
+                            "type": "string",
+                            "description": "Service of the producer."
+                        },
+                        "team": {
+                            "type": "string",
+                            "description": "Team responsible for emitting this log."
+                        },
+                        "eventType": {
+                            "type": "string",
+                            "description": "Type of event."
+                        },
+                        "platform": {
+                            "type": "string",
+                            "description": "The host platform or infrastructure that runs the system."
+                        },
+                        "owner": {
+                            "type": "string",
+                            "description": "The organization that owns this system."
+                        },
+                        "region": {
+                            "type": "string",
+                            "description": "Which region is this system running in?"
+                        },
+                        "jurisdiction": {
+                            "type": "string",
+                            "description": "What legal jurisdiction does this system fall into?"
+                        },
+                        "tags": {
+                            "type": "string",
+                            "description": "Tags for the logged system."
+                        },
+                        "dataSensitivity": {
+                            "type": "string",
+                            "description": "Data sensitivity classification for the contents of this log.",
+                            "oneOf": [
+                                {
+                                    "title": "public",
+                                    "type": "string",
+                                    "format": "DataSensitivity"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "description": "Get user name by ID.",
+    "properties": {
+        "id": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 99,
+            "description": "Customer's ID number"
+        }
+    },
+    "additionalProperties": false
+}

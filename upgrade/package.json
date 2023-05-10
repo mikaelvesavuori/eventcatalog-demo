@@ -1,0 +1,27 @@
+{
+  "name": "eventcatalog-demo-v2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npx eventcatalog start",
+    "dev": "npx eventcatalog dev",
+    "build": "npx eventcatalog build",
+    "generate": "npx eventcatalog generate",
+    "dependencies": "npm install -D @eventcatalog/plugin-doc-generator-asyncapi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@eventcatalog/plugin-doc-generator-asyncapi": "^0.3.0",
+    "@eventcatalog/types": "0.2.1",
+    "@types/node": "18.0.3",
+    "@types/react": "18.0.15",
+    "autoprefixer": "^10.4.0",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@eventcatalog/core": "0.3.3"
+  }
+}
